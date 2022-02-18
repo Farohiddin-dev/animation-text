@@ -1,0 +1,149 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab,#e73c7e);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center; }
+  
+  p {
+    position: relative;
+    left: 250px;
+    text-transform: uppercase; }
+  
+  .small {
+    font-size: 80px;
+    color: white;
+    animation: linear 15s rotate infinite; }
+  
+  .medium {
+    font-size: 35px;
+    animation: linear 30s rotate reverse infinite; }
+  
+  @keyframes rotate {
+    from {
+      transform: rotateZ(0deg); }
+    to {
+      transform: rotateZ(360deg); } }
+  
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #18181c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Nova Mono', monospace;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  width: 1096px;
+  height: 365px;
+  color: goldenrod;
+  perspective: 900px;
+}
+
+.char {
+  offset-path: path('M.5 122.7s24.7-275 276.9 0c327.1 356.7 266.1-330.3 548-33.3 256.9 270.7 271.1 0 271.1 0');
+  offset-distance: calc(var(--char-index) * 1.75rem);
+  position: absolute;
+  animation: wave 2200ms cubic-bezier(.62,.01,.42,1.01) infinite alternate calc(var(--char-index) * 20ms), wave2 2200ms cubic-bezier(.62,.01,.42,1.01) infinite alternate calc(var(--char-index) * 20ms);
+  transform: perspective(800px) scale(1) rotate3d(0, 0, 0, 0);
+}
+
+@keyframes wave {
+  100% {
+    offset-distance: calc((var(--char-index) * 3rem) + 300px);
+    transform: perspective(800px) scale(1.25) rotate3d(1, 0, 0, 180deg);
+    color: red;
+  }
+}
+
+@keyframes wave2 {
+  100% {
+    offset-distance: calc((var(--char-index) * 3.45rem) + 600px);
+    transform: perspective(800px) scale(1.75) rotate3d(1, 0, 0, 360deg);
+    color: goldenrod;
+  }
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-color: #18181c;
+    size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-family: 'Nova Mono', monospace;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    width: 1109px;
+    height: 365px;
+    color: turquoise;
+    z-index: 22;
+  }
+  
+  .char {
+    offset-path: path('M.2 219.6c247-107 233.3 91.4 406.4 138.4C659.2 426.6 750.2 6.6 552.2.6 337.7-5.9 426.9 415 696.1 359.4c256.1-52.9 182.1-217.9 413.1-163.9');
+    offset-distance: calc(var(--char-index) * 1.5rem);
+    position: absolute;
+    animation: loop 3500ms cubic-bezier(.62,.01,.42,1.01) infinite alternate calc(var(--char-index) * 10ms);
+  }
+  
+  @keyframes loop {
+    50% {
+      offset-distance: calc((var(--char-index) * 2.5rem) + 700px);
+      color: hotpink;
+    }
+    100% {
+      offset-distance: calc((var(--char-index) * 1.5rem) + 1690px);
+    }
+  }
+
+@-webkit-keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
